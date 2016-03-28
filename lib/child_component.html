@@ -1,4 +1,10 @@
 <p>I am a child component</p>
 <p>{{ myString }}</p>
-<input #myData type="text"/>
-<button (click)="handleClickEvent(myData.value)">Click Me</button>
+
+<!--example with ngModel-->
+<input [(ngModel)]="myData" myData type="text"/>
+<button (click)="handleClickEvent()">Click Me</button>
+
+<!--example with local variable-->
+<input #myData2 myData type="text"/>
+<button (click)="handleClickEvent2(myData2.value)">Click Me</button>

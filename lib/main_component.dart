@@ -11,14 +11,13 @@ import 'package:angular2_presentation/app_service.dart';
     directives: const [ChildComponent],
     providers: const [AppService])
 class MainComponent {
+  String get mySrc => "images/logo.png";
   String myString = "Hello Universe";
   List<Map> myList = [];
 
   MainComponent(AppService appServiceData) {
-    print("here");
     appServiceData.getData().then((data) {
       myList = data;
-      print(myList);
     });
   }
 
