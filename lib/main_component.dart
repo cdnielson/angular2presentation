@@ -15,8 +15,8 @@ class MainComponent {
   String myString = "Hello Universe";
   List<Map> myList = [];
 
-  MainComponent(AppService appServiceData) {
-    appServiceData.getData().then((data) {
+  MainComponent(AppService appService) {
+    appService.getData().then((data) {
       myList = data;
     });
   }
