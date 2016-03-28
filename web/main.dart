@@ -3,7 +3,7 @@
 
 import 'package:angular2/bootstrap.dart';
 
-import 'package:untitled7/main_component.dart';
+import 'package:angular2_presentation/main_component.dart';
 
 main() {
   bootstrap(MainComponent);

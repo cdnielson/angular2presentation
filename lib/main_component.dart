@@ -2,8 +2,8 @@
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:angular2/angular2.dart';
-import 'child_component.dart';
-import 'app_service.dart';
+import 'package:angular2_presentation/child_component.dart';
+import 'package:angular2_presentation/app_service.dart';
 
 @Component(
     selector: 'my-app',
@@ -14,9 +14,11 @@ class MainComponent {
   String myString = "Hello Universe";
   List<Map> myList = [];
 
-  AppComponent(AppService appServiceData) {
+  MainComponent(AppService appServiceData) {
+    print("here");
     appServiceData.getData().then((data) {
       myList = data;
+      print(myList);
     });
   }
 
