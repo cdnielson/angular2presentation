@@ -2,6 +2,20 @@
 <img [src]="mySrc"/>
 
 <child-component [myString]="myString" (clicked)="handleClicked($event)"></child-component>
+
 <div *ngFor="#data of myList">
     {{data['name']}}
 </div>
+
+<hr>
+
+<h4>attribute directive</h4>
+<p>Select Color</p>
+<div>
+    <input type="radio" name="color" (click)="color='red'"/>Red
+    <input type="radio" name="color" (click)="color='green'"/>Green
+    <input type="radio" name="color" (click)="color='blue'"/>Blue
+</div>
+<br>
+
+<span [myHighlight]="color" [defaultColor]="'yellow'">Highlight me!</span>

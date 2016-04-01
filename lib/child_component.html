@@ -1,10 +1,12 @@
+<hr>
 <p>I am a child component</p>
 <p>{{ myString }}</p>
 
-<!--example with ngModel-->
+<p>example with ngModel</p>
 <input [(ngModel)]="myData" myData type="text"/>
 <button (click)="handleClickEvent()">Click Me</button>
 
-<!--example with local variable-->
+<p>example with local variable</p>
 <input #myData2 myData type="text"/>
 <button (click)="handleClickEvent2(myData2.value)">Click Me</button>
+<hr>

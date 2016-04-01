@@ -6,7 +6,6 @@ import 'dart:async';
 @Injectable()
 class AppService {
   String get pathToData => "../web/data.json";
-  List<Map> theData = [];
 
   Future getData() {
     Future dataReceived = HttpRequest.getString(pathToData).then((data) {
